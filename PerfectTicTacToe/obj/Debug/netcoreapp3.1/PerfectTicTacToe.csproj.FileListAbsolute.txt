@@ -1,0 +1,14 @@
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\bin\Debug\netcoreapp3.1\PerfectTicTacToe.exe
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\bin\Debug\netcoreapp3.1\PerfectTicTacToe.deps.json
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\bin\Debug\netcoreapp3.1\PerfectTicTacToe.runtimeconfig.json
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\bin\Debug\netcoreapp3.1\PerfectTicTacToe.runtimeconfig.dev.json
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\bin\Debug\netcoreapp3.1\PerfectTicTacToe.dll
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\bin\Debug\netcoreapp3.1\PerfectTicTacToe.pdb
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\obj\Debug\netcoreapp3.1\PerfectTicTacToe.csproj.AssemblyReference.cache
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\obj\Debug\netcoreapp3.1\PerfectTicTacToe.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\obj\Debug\netcoreapp3.1\PerfectTicTacToe.AssemblyInfoInputs.cache
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\obj\Debug\netcoreapp3.1\PerfectTicTacToe.AssemblyInfo.cs
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\obj\Debug\netcoreapp3.1\PerfectTicTacToe.csproj.CoreCompileInputs.cache
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\obj\Debug\netcoreapp3.1\PerfectTicTacToe.dll
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\obj\Debug\netcoreapp3.1\PerfectTicTacToe.pdb
+C:\Users\F.P.S\Desktop\Facciamo un altro progetto, lol\PerfectTicTacToe\obj\Debug\netcoreapp3.1\PerfectTicTacToe.genruntimeconfig.cache
