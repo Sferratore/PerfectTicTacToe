@@ -28,7 +28,7 @@ namespace PerfectTicTacToe
                     break;
 
                 default:
-                    Console.WriteLine("Wrong input! :(");
+                    Console.WriteLine("Wrong input! >:(");
                     return;
                     break;
             }
@@ -170,11 +170,36 @@ namespace PerfectTicTacToe
         static void addX(int[,] table)          //Lets you add your X. NEEDS CHECK FOR WRONG INPUT
         {
             int x, y;
-            Console.Write("What is the position of your next move? (horizontally, left = 0 and right = 2) >> ");
-            x = int.Parse(Console.ReadLine());
-            Console.Write("What is the position of your next move? (vertically, bottom = 0 and top = 2) >> ");
-            y = int.Parse(Console.ReadLine());
 
+            do
+            {
+                do
+                {
+                    Console.Write("What is the position of your next move? (horizontally, left = 0 and right = 2) >> ");
+                    x = int.Parse(Console.ReadLine());
+                    if (x != 0 && x != 1 && x != 2)
+                    {
+                        Console.WriteLine("Wrong input! >:(");
+                    }
+                } while (x != 0 && x != 1 && x != 2);
+
+
+                do
+                {
+                    Console.Write("What is the position of your next move? (vertically, bottom = 0 and top = 2) >> ");
+                    y = int.Parse(Console.ReadLine());
+                    if (y != 0 && y != 1 && y != 2)
+                    {
+                        Console.WriteLine("Wrong input! >:(");
+                    }
+                } while (y != 0 && y != 1 && y != 2);
+
+                if (table[x, y] != 0)
+                {
+                    Console.WriteLine("Position is already occupied!! Choose another one.");
+                }
+
+            } while (table[x, y] != 0);
             table[x, y] = 1;
         }
 
