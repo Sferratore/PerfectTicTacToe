@@ -47,6 +47,11 @@ namespace PerfectTicTacToe
                     Console.WriteLine("CPU has won!! ^(-_-)^");
                     return;
                 }
+                else if (checkFull(table))
+                {
+                    Console.WriteLine("No one wins for now... :P");
+                    return;
+                }
                 addX(table);
                 Console.Clear();
                 showTable(table);
@@ -55,13 +60,31 @@ namespace PerfectTicTacToe
                     Console.WriteLine("YOU won!!! *-*");
                     return;
                 }
+                else if (checkFull(table))
+                {
+                    Console.WriteLine("No one wins for now... :P");
+                    return;
+                }
             }
 
 
         }
 
 
-
+        static bool checkFull(int[,] table)
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (table[i, j] == 0)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
 
         static int checkWin(int[,] table)  //Checks if Xs or Os have a tris. Returns 1 if X has won and 2 if O has won. Else, it returns 0 if no one has won.
         {
@@ -142,6 +165,8 @@ namespace PerfectTicTacToe
         }
 
 
+
+
         static void addX(int[,] table)          //Lets you add your X. NEEDS CHECK FOR WRONG INPUT
         {
             int x, y;
@@ -157,7 +182,7 @@ namespace PerfectTicTacToe
 
 
 
-        static void addO(int[,] table)   //CPU adds their O. NEEDS CHECKDIAGONAL
+        static void addO(int[,] table)   //CPU adds their O. 
         {
 
             int flagAdded = 0;
@@ -195,6 +220,46 @@ namespace PerfectTicTacToe
                             flagAdded++;
                             break;
                         }
+                    }
+                }
+            }
+
+            if (flagAdded == 1)
+            {
+                return;
+            }
+
+
+
+            if (checkLeftDiagonal(table))
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (table[j, 2 - j] == 0)
+                    {
+                        table[j, 2 - j] = 2;
+                        flagAdded++;
+                        break;
+
+                    }
+                }
+            }
+
+            if (flagAdded == 1)
+            {
+                return;
+            }
+
+            if (checkRightDiagonal(table))
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (table[j, j] == 0)
+                    {
+                        table[j, j] = 2;
+                        flagAdded++;
+                        break;
+
                     }
                 }
             }
@@ -261,6 +326,57 @@ namespace PerfectTicTacToe
             }
             return false;
         }
+
+        static bool checkLeftDiagonal(int[,] table) //Checks if in left diagonal there are two Xs that could complete the game next turn.
+        {
+            int xnum = 0;
+            int onum = 0;
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (table[i, 2 - i] == 1)
+                {
+                    xnum++;
+                }
+                if (table[i, 2 - i] == 2)
+                {
+                    onum++;
+                }
+            }
+
+            if (xnum == 2 && onum == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
+        static bool checkRightDiagonal(int[,] table) //Checks if in right diagonal there are two Xs that could complete the game next turn.
+        {
+            int xnum = 0;
+            int onum = 0;
+
+            for (int i = 0; i < 3; i++)
+            {
+                if (table[i, i] == 1)
+                {
+                    xnum++;
+                }
+                if (table[i, i] == 2)
+                {
+                    onum++;
+                }
+            }
+
+            if (xnum == 2 && onum == 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
+
 
         static void randPos(int[,] table)
         {
