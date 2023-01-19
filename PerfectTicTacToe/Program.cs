@@ -42,9 +42,19 @@ namespace PerfectTicTacToe
                 Console.Clear();
                 addO(table);
                 showTable(table);           //Game cycle
+                if (checkWin(table) == 2)
+                {
+                    Console.WriteLine("CPU has won!! ^(-_-)^");
+                    return;
+                }
                 addX(table);
                 Console.Clear();
                 showTable(table);
+                if (checkWin(table) == 1)
+                {
+                    Console.WriteLine("YOU won!!! *-*");
+                    return;
+                }
             }
 
 
@@ -53,7 +63,83 @@ namespace PerfectTicTacToe
 
 
 
+        static int checkWin(int[,] table)  //Checks if Xs or Os have a tris. Returns 1 if X has won and 2 if O has won. Else, it returns 0 if no one has won.
+        {
+            //CHECKS FOR X WIN
+            if (table[0, 0] == 1 && table[1, 0] == 1 && table[2, 0] == 1)
+            {
+                return 1;
+            }
+            if (table[0, 1] == 1 && table[1, 1] == 1 && table[2, 1] == 1)
+            {
+                return 1;
+            }
+            if (table[0, 2] == 1 && table[1, 2] == 1 && table[2, 2] == 1)
+            {
+                return 1;
+            }
+            if (table[0, 0] == 1 && table[0, 1] == 1 && table[0, 2] == 1)
+            {
+                return 1;
+            }
+            if (table[1, 0] == 1 && table[1, 1] == 1 && table[1, 2] == 1)
+            {
+                return 1;
+            }
+            if (table[2, 0] == 1 && table[2, 1] == 1 && table[2, 2] == 1)
+            {
+                return 1;
+            }
+            if (table[0, 0] == 1 && table[1, 1] == 1 && table[2, 2] == 1)
+            {
+                return 1;
+            }
+            if (table[0, 2] == 1 && table[1, 1] == 1 && table[2, 0] == 1)
+            {
+                return 1;
+            }
 
+
+
+
+            //CHECKS FOR O WIN
+            if (table[0, 0] == 2 && table[1, 0] == 2 && table[2, 0] == 2)
+            {
+                return 2;
+            }
+            if (table[0, 1] == 2 && table[1, 1] == 2 && table[2, 1] == 2)
+            {
+                return 2;
+            }
+            if (table[0, 2] == 2 && table[1, 2] == 2 && table[2, 2] == 2)
+            {
+                return 2;
+            }
+            if (table[0, 0] == 2 && table[0, 1] == 2 && table[0, 2] == 2)
+            {
+                return 2;
+            }
+            if (table[1, 0] == 2 && table[1, 1] == 2 && table[1, 2] == 2)
+            {
+                return 2;
+            }
+            if (table[2, 0] == 2 && table[2, 1] == 2 && table[2, 2] == 2)
+            {
+                return 2;
+            }
+            if (table[0, 0] == 2 && table[1, 1] == 2 && table[2, 2] == 2)
+            {
+                return 2;
+            }
+            if (table[0, 2] == 2 && table[1, 1] == 2 && table[2, 0] == 2)
+            {
+                return 2;
+            }
+
+
+            //NO ONE WINS
+            return 0;
+        }
 
 
         static void addX(int[,] table)          //Lets you add your X. NEEDS CHECK FOR WRONG INPUT
